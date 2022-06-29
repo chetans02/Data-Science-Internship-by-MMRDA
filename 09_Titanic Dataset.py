@@ -91,4 +91,10 @@ reg_pred = reg.predict(x_test)
 print('LinearRegression')
 print(mean_squared_error(y_test,reg_pred))
 
+#Results
+'''
+LogisticRegression
+0.5396825396825397
+LinearRegression
+0.24553406029157332    '''
 
