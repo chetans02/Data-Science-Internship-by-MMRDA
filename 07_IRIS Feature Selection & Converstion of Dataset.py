@@ -31,7 +31,7 @@ feat_importance = pd.Series(model.feature_importances_, index=X.columns)
 feat_importance.nlargest(4).plot(kind = 'barh')
 plt.show()
 
-'''
+
 #Dataset Conversion
 # Numerical to Categorical
 from sklearn.ensemble import RandomForestClassifier
@@ -68,7 +68,7 @@ print('Random Forest: ', accuracy_score(Y_test,y_pred))
 #Categorical to Numerical
 le = LabelEncoder()
 le.fit(Y)
-Y = le.transform(Y)   '''
+Y = le.transform(Y)   
 
 
 #Dealing with missing values
@@ -82,7 +82,7 @@ df['Item_Weight'].fillna((df['Item_Weight'].mean()), inplace=True)  #Imputing Nu
 df['Outlet_Size'].fillna(('Medium'), inplace=True)  #Imputing Categorical Values  '''
 
 
-'''
+
 #Oversampling & Under Sampling
 from imblearn.over_sampling import RandomOverSampler   #Random OverSampling
 ros = RandomOverSampler(random_state=0)
@@ -94,18 +94,18 @@ X, Y = sms.fit_resample(X,Y)
 
 from imblearn.under_sampling import RandomUnderSampler    #Random UnderSampling
 rus=RandomUnderSampler (random_state=0)
-X, Y=rus.fit_resample(X,Y)  '''
+X, Y=rus.fit_resample(X,Y)  
 
 
-'''
+
 #Identifying Outliers by ploting
 
 from matplotlib import pyplot as plt
 import seaborn as sns
 sns.boxplot(df['sepal_length'])
-plt.show() '''
+plt.show() 
 
-'''
+
 #Identifying Outliers using Interquantile Range
 print(df['sepal_length'])
 Q1 = df['sepal_length'].quantile(0.25)
@@ -126,10 +126,10 @@ out2=df[df['sepal_length'] > upper].values
 df['sepal_length'].replace(out1,lower,inplace=True)
 df['sepal_length'].replace(out2,upper,inplace=True)
 
-print(df['sepal_length'])'''
+print(df['sepal_length'])
 
 
-'''
+
 #Principal Component Analysis
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LogisticRegression
@@ -148,7 +148,7 @@ X=pca.transform(X)
 
 print(X)
 
-X_train, X_test, Y_train, Y_test = train_test_split(X,Y,random_state=0,test_size=0.3) '''
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,random_state=0,test_size=0.3) 
 
 
 #Results:
