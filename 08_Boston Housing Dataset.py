@@ -46,20 +46,3 @@ print(mean_squared_error(y_test,reg_pred))
 
 
 
-
-'''
-from sklearn.ensemble import ExtraTreesClassifier
-import matplotlib.pyplot as plt
-
-model = ExtraTreesClassifier()
-model.fit(x,y)
-print(model.feature_importances_)
-
-feat_importance = pd.Series(model.feature_importances_, index=x.columns)
-feat_importance.nlargest(14).plot(kind = 'barh')
-plt.show() 
-
-print(featuresScores)   '''
-'''
-print(featuresScores)
-df['Item_Weight'].fillna((df['Item_Weight'].mean()), inplace=True)  #Imputing Numerical Values '''
