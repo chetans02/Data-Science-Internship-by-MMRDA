@@ -109,7 +109,7 @@ None
 504    22.0
 505    11.9
 Name: MEDV, Length: 506, dtype: float64
-32.63458728404159  '''
+LinearRegression: 32.63458728404159  '''
 
 
 
